@@ -1,0 +1,82 @@
+@use "./variables.scss" as *;
+@use "../src/styles/variables.scss" as *;
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  @include font-regular-m;
+  background: $color-gray-lighten-3;
+}
+
+html,
+body {
+  height: 100%;
+}
+button {
+  background: transparent;
+  border: none;
+}
+a {
+  color: $color-black-lighten-2;
+  text-decoration: none;
+  &:hover {
+    color: $color-primary;
+    fill: $color-primary;
+  }
+}
+a,
+button {
+  &:focus {
+    outline: 0;
+  }
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}
+input,
+textarea {
+  border: 1px solid $color-gray-lighten-1;
+  box-sizing: border-box;
+  &:focus {
+    outline: 0;
+    border: 1px solid $color-primary;
+  }
+  &:disabled {
+    background: $color-gray-lighten-3;
+  }
+}
+
+:where(input[type="time"]) {
+  padding: 0 1.6rem;
+  // スマホ実機のデフォルトCSSでグレーになるのをキャンセルする
+  background-color: inherit;
+  // color: $color-black;
+  /* 共通CSSの値がキャンセルされていまうため */
+  font-weight: 500;
+}
+/* 実機のデフォルトCSSのセンタリングをキャンセル */
+input::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+fieldset {
+  padding: 1.6rem;
+  // border: 1px solid $color-gray-lighten-1;
+  border-radius: 0.8rem;
+}
+
+@media only print {
+  body {
+    background: none;
+  }
+}

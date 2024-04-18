@@ -1,0 +1,74 @@
+import { Meta, Typeset } from "@storybook/blocks";
+import { baseConfig } from "./config/tailwind.base.config";
+export const { fontSize, fontFamily } = baseConfig.theme;
+
+<Meta
+  title="boron-ui/Typography"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Typography
+
+## Size
+
+<Typeset
+  fontSizes={Object.values({
+    "4xl": fontSize["4xl"],
+    "3xl": fontSize["3xl"],
+    "2xl": fontSize["2xl"],
+    xl: fontSize.xl,
+    lg: fontSize.lg,
+    md: fontSize.md,
+    sm: fontSize.sm,
+    xs: fontSize.xs,
+  })}
+  sampleText={"これからの教室を支える学習管理プラットフォーム"}
+  fontFamily={fontFamily.sans}
+/>
+
+## Font
+
+### 和文
+
+#### normal
+
+<Typeset
+  fontSizes={[fontSize["4xl"]]}
+  sampleText={"これからの教室を支える学習管理プラットフォーム"}
+  fontWeight={400}
+  fontFamily={fontFamily.sans}
+/>
+
+#### bold
+
+<Typeset
+  fontSizes={[fontSize["4xl"]]}
+  sampleText={"これからの教室を支える学習管理プラットフォーム"}
+  fontWeight={700}
+  fontFamily={fontFamily.sans}
+/>
+
+### 欧文
+
+#### normal
+
+<Typeset
+  fontSizes={[fontSize["4xl"]]}
+  sampleText={"Dive to Learn"}
+  fontWeight={400}
+  fontFamily={fontFamily.sans}
+/>
+
+#### bold
+
+<Typeset
+  fontSizes={[fontSize["4xl"]]}
+  sampleText={"Dive to Learn"}
+  fontWeight={700}
+  fontFamily={fontFamily.sans}
+/>

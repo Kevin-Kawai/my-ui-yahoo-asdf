@@ -1,0 +1,42 @@
+name: upload storybook
+env:
+  CI: true
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  upload_storybook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      AWS_ROLE_ARN: arn:aws:iam::278697673392:role/boron-ui-github-actions
+      AWS_REGION: ap-northeast-1
+      S3_BUCKET: boron-ui-storybook
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup
+        uses: ./.github/actions/setup
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          role-session-name: GithubActions
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: build storybook
+        run: yarn run build-storybook
+
+      - name: upload storybook to S3
+        run: |
+          aws s3 sync ./storybook-static/ s3://${{ env.S3_BUCKET }}/ \
+            --delete \
+            --exact-timestamps
+

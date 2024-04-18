@@ -1,0 +1,57 @@
+name: publish package
+
+env:
+  CI: true
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "!*"
+
+jobs:
+  lint_and_test:
+    uses: ./.github/workflows/lint_and_test.yml
+
+  publish:
+    needs: [lint_and_test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup
+        uses: ./.github/actions/setup
+
+      # トランスパイルを実行
+      - name: build
+        run: yarn run build
+
+      # パッケージとして公開する
+      - name: publish
+        run: npx can-npm-publish --verbose && npm publish || echo "No need to publish"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # バージョン情報を環境変数として設定
+      - name: set version to env
+        run: node -p -e '`VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+
+      # バージョン情報持つタグを付与する
+      - name: add version tag
+        uses: pkgdeps/git-tag-action@v2
+        with:
+          version: ${{ env.VERSION }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          git_commit_sha: ${{ github.sha }}
+          git_tag_prefix: "v"
+
+  upload_storybook:
+    needs: [lint_and_test]
+    uses: ./.github/workflows/upload_storybook.yml

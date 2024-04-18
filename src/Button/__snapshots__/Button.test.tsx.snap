@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button 1`] = `
+<div>
+  <button
+    class="buiButtonBase buiButtonVariantFilled"
+  >
+    default
+  </button>
+</div>
+`;
+
+exports[`Button 2`] = `
+<div>
+  <button
+    class="buiButtonBase buiButtonVariantFilled buiButtonHoverVariantOutline buiButtonSizeLg"
+  >
+    sm
+  </button>
+</div>
+`;
+
+exports[`Button 3`] = `
+<div>
+  <button
+    class="buiButtonBase buiButtonVariantOutline buiButtonHoverVariantFilled buiButtonRound buiButtonGapSizeMd buiButtonLeftIconLayoutMd"
+  >
+    sm
+  </button>
+</div>
+`;
+
+exports[`Button 4`] = `
+<div>
+  <button
+    class="buiButtonBase buiButtonVariantFilled buiButtonBlock"
+  >
+    sm
+  </button>
+</div>
+`;

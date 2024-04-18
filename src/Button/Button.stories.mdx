@@ -1,0 +1,94 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/blocks";
+import { Button } from "./Button";
+import { TestIcon } from "./TestIcon";
+
+<Meta
+  title="boron-ui/Button"
+  component={Button}
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Button
+
+## Filled(default)
+
+<Canvas>
+  <Story name="default">
+    <Button>test</Button>
+  </Story>
+  <Story name="default-disabled">
+    <Button disabled>test</Button>
+  </Story>
+  <Story name="default-loading">
+    <Button isLoading>test</Button>
+  </Story>
+  <Story name="default-sm">
+    <Button size="sm">smのButton</Button>
+  </Story>
+  <Story name="default-large">
+    <Button size="lg">lgのButton</Button>
+  </Story>
+  <Story name="default-xl">
+    <Button size="xl">xlのButton</Button>
+  </Story>
+  <Story name="default-2xl">
+    <Button size="2xl">2xlのButton</Button>
+  </Story>
+  <Story name="default-link">
+    <a
+      className="buiButtonBase buiButtonVariantFilled"
+      href="http://www.google.com/"
+      target="_blank"
+    >
+      これはボタンの見た目をしたリンク
+    </a>
+  </Story>
+</Canvas>
+
+## Outline
+
+<Canvas>
+  <Story name="outline">
+    <Button variant="outline">test</Button>
+  </Story>
+  <Story name="outline-disabled">
+    <Button variant="outline" disabled>
+      test
+    </Button>
+  </Story>
+  <Story name="outline-icon-1">
+    <Button variant="outline" size="Small" gapSize="md">
+      <span>ファイルの編集</span>
+      <TestIcon />
+    </Button>
+  </Story>
+  <Story name="outline-round">
+    <Button variant="outline" size="sm" isRound>
+      リンクをコピー
+    </Button>
+  </Story>
+  <Story name="outline-hover-fill">
+    <Button variant="outline" size="sm" hoverVariant="filled" isRound>
+      リンクをコピー
+    </Button>
+  </Story>
+  <Story name="outline-with-icon-layout-left">
+    <Button variant="outline" gapSize="md" withLeftIconLayoutSize="md">
+      <TestIcon />
+      <span>リンクをコピー</span>
+    </Button>
+  </Story>
+  <Story name="outline-with-icon-layout-right">
+    <Button variant="outline" gapSize="md" withRightIconLayoutSize="md">
+      <span>リンクをコピー</span>
+      <TestIcon />
+    </Button>
+  </Story>
+</Canvas>
+
+<ArgsTable of={Button} />

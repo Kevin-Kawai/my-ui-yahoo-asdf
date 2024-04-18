@@ -1,0 +1,112 @@
+@use "../styles/variables.scss";
+
+.buiButtonBase {
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  --bui-button-padding-left: var(--bui-spacing-10);
+  --bui-button-padding-right: var(--bui-spacing-10);
+  padding: 0 var(--bui-spacing-10);
+  cursor: pointer;
+  height: 4.5rem;
+  white-space: nowrap;
+  line-height: 1;
+  --bui-button-main-color: var(--bui-colors-blue-400);
+  --bui-button-sub-color: #fff;
+  --bui-button-disabled-color: var(--bui-colors-gray-500);
+  // aタグでも使えるように明示的に指定
+  box-sizing: border-box;
+}
+.buiButtonBase,
+.buiButtonBase:hover {
+  // hoverでもCSSのルールが明示されていないと、 global.cssのhoverが優先されてしまうため
+  color: var(--_bui-button-font-color);
+  fill: var(--_bui-button-font-color);
+  background-color: var(--_bui-button-background-color);
+  border: 1px solid var(--_bui-button-border-color);
+}
+
+.buiButtonBase:disabled {
+  cursor: not-allowed;
+}
+.buiButtonHoverVariantTransparent:hover,
+.buiButtonVariantOutline:hover {
+  opacity: 0.6;
+}
+.buiButtonVariantFilled,
+.buiButtonHoverVariantFilled:hover {
+  --_bui-button-background-color: var(--bui-button-main-color);
+  --_bui-button-font-color: var(--bui-button-sub-color);
+  --_bui-button-border-color: var(--bui-button-main-color);
+  opacity: revert;
+}
+.buiButtonVariantFilled:disabled {
+  --_bui-button-background-color: var(--bui-button-disabled-color);
+  --_bui-button-border-color: var(--bui-button-disabled-color);
+}
+
+.buiButtonVariantOutline,
+.buiButtonHoverVariantOutline:hover {
+  --_bui-button-background-color: var(--bui-button-sub-color);
+  --_bui-button-font-color: var(--bui-button-main-color);
+  --_bui-button-border-color: var(--bui-button-main-color);
+  opacity: revert;
+  font-weight: bold;
+}
+
+.buiButtonVariantOutline:disabled {
+  --_bui-button-border-color: var(--bui-button-disabled-color);
+  --_bui-button-font-color: var(--bui-colors-gray-500);
+}
+
+.buiButtonSizeXs {
+  padding: 0.8rem 1.6rem;
+  font-size: var(--bui-font-size-xs);
+  height: 2.8rem;
+}
+.buiButtonSizeSm {
+  padding: 0 2rem;
+  height: 3.6rem;
+}
+.buiButtonSizeMd {
+  height: 4.5rem;
+}
+.buiButtonSizeLg {
+  height: 4.8rem;
+}
+.buiButtonSizeXl {
+  height: 5.6rem;
+}
+.buiButtonSize2Xl {
+  height: 6rem;
+}
+
+.buiButtonBlock {
+  width: 100%;
+}
+.buiButtonRound {
+  border-radius: 100vmax;
+}
+.buiButtonFullWidth {
+  padding: revert;
+  width: 100%;
+}
+.buiButtonGapSizeSm {
+  gap: var(--bui-spacing-1);
+}
+.buiButtonGapSizeMd {
+  gap: var(--bui-spacing-3);
+}
+.buiButtonGapSizeLg {
+  gap: var(--bui-spacing-4);
+}
+
+.buiButtonLeftIconLayoutMd {
+  padding-left: 2.2rem;
+  padding-right: var(--bui-spacing-10);
+}
+.buiButtonRightIconLayoutMd {
+  padding-left: var(--bui-spacing-10);
+  padding-right: 2.2rem;
+}

@@ -1,0 +1,389 @@
+// Colors:
+
+// 01 Primary
+$color-primary: #4082ed;
+$color-primary-lighten-2: #79a7f2;
+$color-primary-lighten-1: #c5d9fa;
+$color-primary-darken-1: #316ed0;
+
+// 02 Gray
+$color-gray-darken-3: #7c8396;
+$color-gray-darken-2: #9aa0b2;
+$color-gray-darken-1: #abb1c1;
+$color-gray-normal: #c7ccd9;
+$color-gray-lighten-1: #dee1e9;
+$color-gray-lighten-2: #f2f4f7;
+$color-gray-lighten-3: #f7f8fc;
+
+// 03 Grade
+$color-icon-pink: #f37a89;
+$color-icon-yellow: #f2ba5f;
+$color-icon-green: #9bc66d;
+$color-icon-cyan: #85c5de;
+
+// 05 Black
+$color-black: #47506e;
+$color-black-lighten-1: #5c5f6a;
+$color-black-lighten-2: #838a9e;
+
+// 06 Attention
+$color-notification: #f03d3d;
+
+/* 07 Analytics Graph Bar */
+$color-01: #ff9f9f;
+$color-02: #fcd568;
+$color-03: #99cfc1;
+$color-04: #a9c8e7;
+$color-05: #ceaade;
+$color-06: #ffc380;
+$color-07: #d6dd83;
+$color-08: #9ec2ce;
+$color-09: #7aa9d6;
+$color-10: #f5bfd1;
+$color-11: #fad590;
+$color-12: #b8d593;
+$color-13: #97b1c9;
+$color-14: #a2b9e2;
+$color-15: #fca9ae;
+$color-16: #cbcbcb;
+$color-17: #aad0a7;
+$color-18: #b2bbeb;
+$color-19: #a4aec7;
+$color-20: #a69f9f;
+
+// light-blue
+$color-light-blue: #32b4e6;
+$color-light-blue-lighten-1: #c5e7f4;
+
+// light-green
+$color-light-green: #80bc40;
+$color-light-green-lighten-1: #d1e8b8;
+
+// red
+$color-red: #e25461;
+$color-red-darken-1: #c34650;
+$color-red-ligten-2: #fff0f0;
+
+// Font Styles:
+$basic-font-family: -apple-system, BlinkMacSystemFont, "Lato", "Yu Gothic",
+  "YuGothic", "meiryo";
+
+// 絵文字フォントを優先したいときに指定するfont-family
+$emoji-font-family: apple color emoji, segoe ui emoji, noto color emoji,
+  android emoji, emojisymbols, emojione mozilla, twemoji mozilla,
+  segoe ui symbol;
+
+// Regular XL font style
+$font-regular-xl-font-size: 1.6rem;
+$font-regular-xl-line-height: normal;
+$font-regular-xl-text-align: left;
+$font-regular-xl-color: $color-black;
+$font-regular-xl-font-style: normal;
+$font-regular-xl-font-weight: 500;
+$font-regular-xl-font-family: $basic-font-family;
+
+@mixin font-regular-xl() {
+  font-size: $font-regular-xl-font-size;
+  line-height: $font-regular-xl-line-height;
+  text-align: $font-regular-xl-text-align;
+  color: $font-regular-xl-color;
+  font-style: $font-regular-xl-font-style;
+  font-weight: $font-regular-xl-font-weight;
+  font-family: $font-regular-xl-font-family;
+}
+
+// Regular L font style
+$font-regular-l-font-size: 1.5rem;
+$font-regular-l-line-height: normal;
+$font-regular-l-text-align: left;
+$font-regular-l-color: $color-black;
+$font-regular-l-font-style: normal;
+$font-regular-l-font-weight: 500;
+$font-regular-l-font-family: $basic-font-family;
+
+@mixin font-regular-l() {
+  font-size: $font-regular-l-font-size;
+  line-height: $font-regular-l-line-height;
+  text-align: $font-regular-l-text-align;
+  color: $font-regular-l-color;
+  font-style: $font-regular-l-font-style;
+  font-weight: $font-regular-l-font-weight;
+  font-family: $font-regular-l-font-family;
+}
+
+// Regular M font style
+$font-regular-m-font-size: 1.4rem;
+$font-regular-m-line-height: normal;
+$font-regular-m-text-align: left;
+$font-regular-m-color: $color-black;
+$font-regular-m-font-style: normal;
+$font-regular-m-font-weight: 500;
+$font-regular-m-font-family: $basic-font-family;
+
+@mixin font-regular-m() {
+  font-size: $font-regular-m-font-size;
+  line-height: $font-regular-m-line-height;
+  text-align: $font-regular-m-text-align;
+  color: $font-regular-m-color;
+  font-style: $font-regular-m-font-style;
+  font-weight: $font-regular-m-font-weight;
+  font-family: $font-regular-m-font-family;
+}
+
+// Regular S font style
+$font-regular-s-font-size: 1.3rem;
+$font-regular-s-line-height: normal;
+$font-regular-s-text-align: left;
+$font-regular-s-color: $color-black;
+$font-regular-s-font-style: normal;
+$font-regular-s-font-weight: 500;
+$font-regular-s-font-family: $basic-font-family;
+
+@mixin font-regular-s() {
+  font-size: $font-regular-s-font-size;
+  line-height: $font-regular-s-line-height;
+  text-align: $font-regular-s-text-align;
+  color: $font-regular-s-color;
+  font-style: $font-regular-s-font-style;
+  font-weight: $font-regular-s-font-weight;
+  font-family: $font-regular-s-font-family;
+}
+
+// Regular XS font style
+$font-regular-xs-font-size: 1.2rem;
+$font-regular-xs-line-height: normal;
+$font-regular-xs-text-align: left;
+$font-regular-xs-color: $color-black;
+$font-regular-xs-font-style: normal;
+$font-regular-xs-font-weight: 500;
+$font-regular-xs-font-family: $basic-font-family;
+
+@mixin font-regular-xs() {
+  font-size: $font-regular-xs-font-size;
+  line-height: $font-regular-xs-line-height;
+  text-align: $font-regular-xs-text-align;
+  color: $font-regular-xs-color;
+  font-style: $font-regular-xs-font-style;
+  font-weight: $font-regular-xs-font-weight;
+  font-family: $font-regular-xs-font-family;
+}
+
+// Bold XL font style
+$font-bold-xl-font-size: 1.6rem;
+$font-bold-xl-line-height: normal;
+$font-bold-xl-text-align: left;
+$font-bold-xl-color: $color-black;
+$font-bold-xl-font-style: normal;
+$font-bold-xl-font-weight: bold;
+$font-bold-xl-font-family: $basic-font-family;
+
+@mixin font-bold-xl() {
+  font-size: $font-bold-xl-font-size;
+  line-height: $font-bold-xl-line-height;
+  text-align: $font-bold-xl-text-align;
+  color: $font-bold-xl-color;
+  font-style: $font-bold-xl-font-style;
+  font-weight: $font-bold-xl-font-weight;
+  font-family: $font-bold-xl-font-family;
+}
+
+// Bold L font style
+$font-bold-l-font-size: 1.5rem;
+$font-bold-l-line-height: normal;
+$font-bold-l-text-align: left;
+$font-bold-l-color: $color-black;
+$font-bold-l-font-style: normal;
+$font-bold-l-font-weight: bold;
+$font-bold-l-font-family: $basic-font-family;
+
+@mixin font-bold-l() {
+  font-size: $font-bold-l-font-size;
+  line-height: $font-bold-l-line-height;
+  text-align: $font-bold-l-text-align;
+  color: $font-bold-l-color;
+  font-style: $font-bold-l-font-style;
+  font-weight: $font-bold-l-font-weight;
+  font-family: $font-bold-l-font-family;
+}
+
+// Bold M font style
+$font-bold-m-font-size: 1.4rem;
+$font-bold-m-line-height: normal;
+$font-bold-m-text-align: left;
+$font-bold-m-color: $color-black;
+$font-bold-m-font-style: normal;
+$font-bold-m-font-weight: bold;
+$font-bold-m-font-family: $basic-font-family;
+
+@mixin font-bold-m() {
+  font-size: $font-bold-m-font-size;
+  line-height: $font-bold-m-line-height;
+  text-align: $font-bold-m-text-align;
+  color: $font-bold-m-color;
+  font-style: $font-bold-m-font-style;
+  font-weight: $font-bold-m-font-weight;
+  font-family: $font-bold-m-font-family;
+}
+
+// Bold S font style
+$font-bold-s-font-size: 1.3rem;
+$font-bold-s-line-height: normal;
+$font-bold-s-text-align: left;
+$font-bold-s-color: $color-black;
+$font-bold-s-font-style: normal;
+$font-bold-s-font-weight: bold;
+$font-bold-s-font-family: $basic-font-family;
+
+@mixin font-bold-s() {
+  font-size: $font-bold-s-font-size;
+  line-height: $font-bold-s-line-height;
+  text-align: $font-bold-s-text-align;
+  color: $font-bold-s-color;
+  font-style: $font-bold-s-font-style;
+  font-weight: $font-bold-s-font-weight;
+  font-family: $font-bold-s-font-family;
+}
+
+// Bold XS font style
+$font-bold-xs-font-size: 1.2rem;
+$font-bold-xs-line-height: normal;
+$font-bold-xs-text-align: left;
+$font-bold-xs-color: $color-black;
+$font-bold-xs-font-style: normal;
+$font-bold-xs-font-weight: bold;
+$font-bold-xs-font-family: $basic-font-family;
+
+@mixin font-bold-xs() {
+  font-size: $font-bold-xs-font-size;
+  line-height: $font-bold-xs-line-height;
+  text-align: $font-bold-xs-text-align;
+  color: $font-bold-xs-color;
+  font-style: $font-bold-xs-font-style;
+  font-weight: $font-bold-xs-font-weight;
+  font-family: $font-bold-xs-font-family;
+}
+
+// counter font style
+$font-counter-font-size: 3.6rem;
+$font-counter-line-height: normal;
+$font-counter-text-align: left;
+$font-counter-color: $color-black;
+$font-counter-font-style: normal;
+$font-counter-font-weight: 400;
+$font-counter-font-family: $basic-font-family;
+
+@mixin font-counter() {
+  font-size: $font-counter-font-size;
+  line-height: $font-counter-line-height;
+  text-align: $font-counter-text-align;
+  color: $font-counter-color;
+  font-style: $font-counter-font-style;
+  font-weight: $font-counter-font-weight;
+  font-family: $font-counter-font-family;
+}
+
+// Number font style
+$font-number-font-size: 2rem;
+$font-number-line-height: normal;
+$font-number-text-align: left;
+$font-number-color: #000000;
+$font-number-font-style: normal;
+$font-number-font-weight: bold;
+$font-number-font-family: $basic-font-family;
+
+@mixin font-number() {
+  font-size: $font-number-font-size;
+  line-height: $font-number-line-height;
+  text-align: $font-number-text-align;
+  color: $font-number-color;
+  font-style: $font-number-font-style;
+  font-weight: $font-number-font-weight;
+  font-family: $font-number-font-family;
+}
+
+// breakpoints
+$breakpoint-tablet-wide: 1024px;
+$breakpoint-tablet-960: 960px; // portrait on 11inch ipad or any other tablets
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+// analytics
+$color-analytics-level-15: #e1eaf7;
+$color-analytics-level-14: #f2f5fa;
+$color-analytics-level-13: #f6fafe;
+$color-analytics-level-12: #fffbf7;
+$color-analytics-level-11: #fef6f6;
+$color-analytics-level-00: #feeded;
+$color-analytics-level-01: #fee0e0;
+$color-analytics-level-02: #fdcece;
+$color-analytics-level-03: #fcbcbc;
+$color-analytics-level-04: #fbb2b2;
+$color-analytics-level-05: #faa5a5;
+
+// line
+$color-line-color: #00b900;
+
+// media queries
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+// layout
+// 画面全体のレイアウトに関わる値
+$mobile-sp-global-header-height: 6rem;
+$mobile-global-header-height: 6.4rem;
+$mobile-header-notifications-heading-height: 4rem;
+$mobile-header-menu-footer-height: 4rem;
+
+// export to TypeScript
+:export {
+  colorPrimary: $color-primary;
+  colorPrimaryLighten1: $color-primary-lighten-1;
+  colorBlack: $color-black;
+  colorBlackLighten1: $color-black-lighten-1;
+  colorBlackLighten2: $color-black-lighten-2;
+  colorGrayDarken1: $color-gray-darken-1;
+  colorGrayDarken2: $color-gray-darken-2;
+  colorGrayLighten1: $color-gray-lighten-1;
+  colorGrayLighten2: $color-gray-lighten-2;
+  colorGrayLighten3: $color-gray-lighten-3;
+  colorIconPink: $color-icon-pink;
+  colorIconYellow: $color-icon-yellow;
+  colorIconGreen: $color-icon-green;
+  colorIconCyan: $color-icon-cyan;
+  color1: $color-01;
+  color2: $color-02;
+  color3: $color-03;
+  color4: $color-04;
+  color5: $color-05;
+  color6: $color-06;
+  color7: $color-07;
+  color8: $color-08;
+  color9: $color-09;
+  color10: $color-10;
+  color11: $color-11;
+  color12: $color-12;
+  color13: $color-13;
+  color14: $color-14;
+  color15: $color-15;
+  color16: $color-16;
+  color17: $color-17;
+  color18: $color-18;
+  color19: $color-19;
+  color20: $color-20;
+  breakpointMobile: $breakpoint-mobile;
+}

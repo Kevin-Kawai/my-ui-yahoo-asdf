@@ -1,0 +1,29 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const SvgIconSync = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="24px"
+    height="24px"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    role="img"
+    {...props}
+  >
+    <g
+      id="boron-ui__icon-sync__icon-/-icon-sync"
+      stroke="none"
+      strokeWidth={1}
+      fill="currentColor"
+      fillRule="evenodd"
+    >
+      <path
+        d="M11.75,4.72727273 L11.75,2 L8,5.63636364 L11.75,9.27272727 L11.75,6.54545455 C14.853125,6.54545455 17.375,8.99090909 17.375,12 C17.375,12.9181818 17.140625,13.7909091 16.71875,14.5454545 L18.0875,15.8727273 C18.81875,14.7545455 19.25,13.4272727 19.25,12 C19.25,7.98181818 15.89375,4.72727273 11.75,4.72727273 Z M12.5,17.4545455 C9.396875,17.4545455 6.875,15.0090909 6.875,12 C6.875,11.0818182 7.109375,10.2090909 7.53125,9.45454545 L6.1625,8.12727273 C5.43125,9.24545455 5,10.5727273 5,12 C5,16.0181818 8.35625,19.2727273 12.5,19.2727273 L12.5,22 L16.25,18.3636364 L12.5,14.7272727 L12.5,17.4545455 Z"
+        id="boron-ui__icon-sync__Shape"
+        fill="currentColor"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+);
+export default SvgIconSync;

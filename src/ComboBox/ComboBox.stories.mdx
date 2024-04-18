@@ -1,0 +1,145 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { ComboBox } from "./ComboBox";
+
+<Meta
+  title="boron-ui/ComboBox"
+  component={ComboBox}
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# ComboBox
+
+## default
+
+<Canvas>
+  <Story name="default">
+    <ComboBox
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+## clearable
+
+<Canvas>
+  <Story name="clearable">
+    <ComboBox
+      isClearable
+      defaultValue={{ label: "a", value: "a" }}
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+## disabled
+
+<Canvas>
+  <Story name="disabled">
+    <ComboBox
+      isDisabled
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+## loading
+
+<Canvas>
+  <Story name="loading">
+    <ComboBox isLoading options={[]} />
+  </Story>
+</Canvas>
+
+## Error
+
+<Canvas>
+  <Story name="error">
+    <ComboBox hasError={true} />
+  </Story>
+</Canvas>
+
+## NoOption
+
+<Canvas>
+  <Story name="nooptions">
+    <ComboBox options={[]} />
+  </Story>
+</Canvas>
+
+## Grouped
+
+<Canvas>
+  <Story name="grouped">
+    <ComboBox
+      options={[
+        {
+          label: "グループ名",
+          options: [
+            { label: "選択肢", value: "a" },
+            { label: "選択肢", value: "b" },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+## size
+
+### size: xs
+
+<Canvas>
+  <Story name="xs">
+    <ComboBox
+      size="xs"
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+### size: sm
+
+<Canvas>
+  <Story name="sm">
+    <ComboBox
+      size="sm"
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+### size: md
+
+<Canvas>
+  <Story name="md">
+    <ComboBox
+      size="md"
+      options={[
+        { label: "a", value: "a" },
+        { label: "b", value: "b" },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+<ArgsTable of={ComboBox} />

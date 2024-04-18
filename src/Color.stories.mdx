@@ -1,0 +1,34 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import { baseConfig } from "./config/tailwind.base.config";
+export const { colors } = baseConfig.theme;
+export const getColors = (colorName) => {
+  if (typeof colors[colorName] === "string") {
+    return { [colorName]: colors[colorName] };
+  }
+  return Object.fromEntries(
+    new Map(
+      Object.entries(colors[colorName]).map((color) => [
+        [`${colorName} ${color[0]}`],
+        color[1],
+      ])
+    )
+  );
+};
+
+<Meta
+  title="boron-ui/Color"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Color
+
+<ColorPalette>
+  {Object.keys(colors).map((colorName) => (
+    <ColorItem title={colorName} colors={getColors(colorName)} />
+  ))}
+</ColorPalette>

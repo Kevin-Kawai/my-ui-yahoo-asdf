@@ -1,0 +1,35 @@
+name: lint and test
+
+env:
+  CI: true
+
+on:
+  push:
+    branches-ignore:
+      - main
+    tags:
+      - "!*"
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup
+        uses: ./.github/actions/setup
+
+      - name: prettier
+        run: yarn run prettier --check .
+
+      - name: eslint
+        run: yarn run eslint .
+
+      - name: test
+        run: yarn run test:ci
